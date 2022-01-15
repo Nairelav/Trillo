@@ -4,6 +4,14 @@
   background-color: var(--color-grey-light-1);
   border-bottom: var(--border-bottom);
   font-size: 1.4rem;
+
+  @include respond(bp-medium) {
+    padding: 2rem;
+  }
+
+  @include respond(bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -11,6 +19,15 @@
   margin-right: 3.5rem;
   padding: 3rem;
   box-shadow: var(--shadow-dark-small);
+
+  @include respond(bp-medium) {
+    margin-right: 2rem;
+  }
+
+  @include respond(bp-small) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .user-reviews {
@@ -39,6 +56,10 @@
     margin-right: auto;
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -47,7 +68,7 @@
     border: 3px solid #fff;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }

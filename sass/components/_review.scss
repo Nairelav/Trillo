@@ -6,6 +6,10 @@
   overflow: hidden;
   position: relative;
 
+  @include respond(bp-medium) {
+    margin-bottom: 2rem;
+  }
+
   &__text {
     margin-bottom: 2rem;
     position: relative;
